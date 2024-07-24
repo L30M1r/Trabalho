@@ -1,0 +1,310 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    list-style: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+    color: black;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    
+}
+
+
+.cabecalho{
+    background-color: rgb(255, 136, 0);
+    display: flex;
+    padding: 15px;
+}
+
+.cabecalho-conteudo{
+    width: 70%;
+    margin: auto;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-between;
+}
+.titulo-container{
+    display: flex;
+    align-items: center;
+    
+}
+.titulo-container h1{
+    color: white;
+}
+
+.titulo-container img {
+    width: 50px;
+    margin-left: 10px;
+}
+
+.pesquisar-container{
+    display: flex;
+}
+.pesquisar-container input{
+    padding: 0 10px;
+    border-radius: 6px 0 0 6px;
+}
+
+.pesquisar-container input:focus{
+    outline: none;
+    border: 1px solid #ccc;
+}
+.pesquisar-container button {
+    background-color: orangered;
+    border-radius:0 6px 6px 0;
+    padding: 0 10px;
+}
+
+.pesquisar-container button img{
+    width: 40px;
+}
+
+.main{
+    margin: auto;
+    max-width: 70%;
+    box-shadow: 0 10px 10px 0 #0000003d ;
+    padding: 20px 20px 40px 20px ;
+    border-radius: 0 0 5px 5px;
+    flex: 3;
+}
+
+.adicionar-container{
+    background-color: #ccc;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 60px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.adicionar-container input{
+    height: 40px;
+    padding: 0 10px;
+    border-radius: 6px;
+    margin: 10px 0;
+}
+.adicionar-container h3{
+    text-align: center;
+}
+
+.adicionar-container button {
+    background-color: lime;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 5px 10px;
+    margin-top: 10px;
+    border-radius: 6px;
+    color: white;
+}
+.adicionar-container button img{
+    width: 40px;
+}
+
+.lista-tarefas-container{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #000;
+    padding: 10px;
+    height: 400px;
+    border-radius: 10px;
+    position: relative;
+  
+}
+
+.lista-tarefas{
+    display: flex;
+    height: 400px;
+    overflow-y: scroll;
+}
+.lista-tarefas-container h1 {
+    text-align: center;
+    margin: 10px 0 20px; 
+
+}
+
+.tarefa{
+    background-color: rgba(255, 166, 0, 0.708);
+    display: flex;
+    border-radius: 6px;
+    flex: 1;
+    padding: 20px 20px ;
+    align-items: center;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.tarefa-textos{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    flex: 1;
+    gap: 10px;
+}
+
+.id-e-titulo{
+    display: flex;
+    flex: 1;
+    align-items: center;
+}
+.tarefa-botaos{
+    display: flex;
+}
+.tarefa-botaos button{
+    margin-left: 10px;
+    height: 40px;
+    width: 40px;
+    border-radius: 6px;
+    padding: 4px;
+}
+
+.completar {
+    background-color: lime;
+}
+.editar {
+    background-color: rgb(45, 129, 255);
+}
+.deletar{
+    background-color: rgb(255, 28, 28);
+}
+
+
+.carregando {
+    border: 5px solid #b4b4b4;
+    border-top: 5px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    position: absolute;
+
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+
+.modal-container::backdrop {
+    background-color: hsla(0, 0%, 0%, 0.5);
+    animation: fadeIn .5s;
+}
+
+.modal-container {
+    margin: auto;
+    width: 65%;
+    padding: 12px;
+    border-radius: 6px;
+    animation: slideIn .5s;
+}
+
+.modal-container h2{
+    text-align: center;
+}
+
+
+.texto-editar{
+    background-color: #ccc;
+    padding:  10px;
+    margin: 10px 0 ;
+    border-radius: 4px;
+}
+
+
+.inputs-modal-container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+
+}
+
+.input-editar-container input{
+    background-color: #eaeaea;
+    padding: 15px 5px;
+    border-radius: 4px;
+    margin: 10px 0;
+    border: 2px solid #ccc;
+}
+.botaos-editar{
+    display: flex;
+    margin-top: 20px;
+    gap: 20px;
+}
+.botaos-editar button {
+    flex: 1;
+    padding: 17px 0;
+    border-radius: 6px;
+    color: white;
+    font-weight: bold;
+}
+.atualizar {
+    background-color: lime;
+}
+.cancelar-edicao{
+    background-color: red;
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-100%); }
+    to { transform: translateY(0); }
+}
+
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@media (max-width: 700px) {
+    
+    .cabecalho-conteudo{
+        justify-content: center;
+    }
+    .titulo-logo{
+        font-size: 1.4rem;
+    }
+    .tarefa{
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+    .main{
+        padding-inline: 10px;
+        max-width: 100%;
+    }
+    .modal-container{
+        width: 90%;
+    }
+    .tarefa-textos{
+        align-items: center;
+        text-align: center;
+    }
+    .id-e-titulo{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .id-e-titulo h2{
+        font-size: 1.3rem;
+    }
+}
