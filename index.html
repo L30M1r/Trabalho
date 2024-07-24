@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="cabecalho">
+        <div class="cabecalho-conteudo">
+            <div class="titulo-container">
+                <h1 class="titulo-logo">Lista de tarefas</h1>
+            </div>
+
+            <div class="pesquisar-container">
+                <input type="text" placeholder="Digite o id do usuário" class="input-pesquisar">
+                <button class="pesquisar"><img src="./imgs/icons8-search-48.png" alt=""></button>
+            </div>
+
+        </div>
+    </header>
+
+
+
+    <main class="main">
+        <section class="adicionar-container">
+            <h3>Adicione uma nova tarefa</h3>
+            <label for="titulo-input">Título</label>
+            <input type="text" class="titulo-input" id="titulo-input">
+            <label for="descricao-input">Descrição</label>
+            <input type="text" class="descricao-input" id="descricao-input">
+            <button class="adicionar">Adicionar<img src="./imgs/icons8-add-50.png" alt=""></button>
+
+        </section>
+
+        <section class="lista-tarefas-container">
+            <h1>Lista de tarefas</h1>
+            <div class="carregando"></div>
+            <div class="lista-tarefas">
+                <div class="tarefa">
+                    <div class="tarefa-textos">
+                        <p class="id-usuario">Usuário 1 -</p>
+                        <h2 class="titulo-tarefa">Titulo: </h2>
+                        <p class="descricao">Sem descrição</p>
+                    </div>
+
+                    <div class="tarefa-botaos">
+                        <button class="completar"><img src="./imgs/icons8-done-30.png" alt=""></button>
+                        <button class="editar"><img src="./imgs/icons8-edit-30.png" alt=""></button>
+                        <button class="deletar"><img src="./imgs/icons8-delete-24.png" alt=""></button>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+
+
+    <dialog class="modal-container">
+        <div class="modal-conteudo">
+            <h2>Editar tarefa</h2>
+            <div class="input-editar-container">
+                <p class="texto-editar id-editar">id : </p>
+                <p class="texto-editar user-editar">Usuário: </p>
+                <div class="inputs-modal-container">
+                    <label for="titulo">Título</label>
+                    <input type="text" name="" id="titulo" class="titulo-editar">
+                    <label for="descricao">Descrição</label>
+                    <input type="text" name="" id="descricao" class="descricao-editar">
+                </div>
+            </div>
+            <div class="botaos-editar">
+                <button class="atualizar">Salvar</button>
+                <button class="cancelar-edicao">Cancelar</button>
+            </div>
+        </div>
+    </dialog>
+
+    <script src="script.js">
+    </script>
+</body>
+
+</html>
